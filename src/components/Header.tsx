@@ -1,4 +1,4 @@
-import { Text, HStack, Box } from 'native-base';
+import { Box, HStack, Text } from 'native-base';
 import { CaretLeft, Export } from 'phosphor-react-native';
 
 import { ButtonIcon } from './ButtonIcon';
@@ -17,8 +17,8 @@ export function Header({ title, showBackButton = false, showShareButton = false 
       <HStack w="full" alignItems="center" justifyContent="space-between">
         {
           showBackButton
-            ? <ButtonIcon icon={CaretLeft} />
-            : <EmptyBoxSpace />
+            ? (<ButtonIcon icon={CaretLeft} />)
+            : (<EmptyBoxSpace />)
         }
 
         <Text color="white" fontFamily="medium" fontSize="md" textAlign="center">
@@ -28,9 +28,9 @@ export function Header({ title, showBackButton = false, showShareButton = false 
         {
           showShareButton
             ?
-            <ButtonIcon icon={Export} />
+            (<ButtonIcon icon={Export} />)
             :
-            <EmptyBoxSpace />
+            (<EmptyBoxSpace />)
         }
       </HStack>
     </HStack>
